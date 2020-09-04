@@ -1,0 +1,23 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: sample-project-java
+  datasource:
+    url: jdbc:postgresql://localhost:5432/sample_project_java
+    username: sample_project_java
+    password: {Your database password}
+  jpa:
+    show-sql: false
+    hibernate:
+      ddl-auto: none
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        jdbc:
+        lob:
+          non_contextual_creation: true
+  liquibase: #liquibase changelog properties
+    enabled: true
+    change-log: classpath:db/db-changelog-master.yaml

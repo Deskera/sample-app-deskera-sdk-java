@@ -1,0 +1,28 @@
+databaseChangeLog:
+  - changeSet:
+      id: user-sample
+      author: Brajesh
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    primaryKeyName: users_pk
+                  name: id
+                  type: BIGSERIAL
+              - column:
+                  name: user_id
+                  type: varchar(100)
+              - column:
+                  name: access_token
+                  type: varchar
+              - column:
+                  name: refresh_token
+                  type: varchar
+              - column:
+                  name: user_details
+                  type: varchar
+            remarks: This table stores the user information.
+            tableName: user_sample

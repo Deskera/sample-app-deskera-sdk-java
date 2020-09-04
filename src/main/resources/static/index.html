@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <title>Sample Application</title>
+    <meta name="description" content=""/>
+    <meta name="viewport" content="width=device-width"/>
+    <base href="/"/>
+    <link rel="stylesheet" type="text/css" href="/webjars/bootstrap/css/bootstrap.min.css"/>
+    <script type="text/javascript" src="/webjars/jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="/webjars/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        var checkstatus = function(){
+            $.get("/connect/status", function(data) {
+                if(data && data.connected) {
+                    $("#user").html(JSON.parse(data.userDetails).name);
+                    $(".unauthenticated").hide()
+                    $(".authenticated").show()
+                } else {
+                    $(".unauthenticated").show()
+                    $(".authenticated").hide()
+                }
+            });
+        }
+        var oauthconnect = function(){
+            $.ajax({
+                url: "/connect",
+                type: 'GET',
+                async: false,
+                cache: false,
+                timeout: 30000,
+                error: function(){
+                    return true;
+                },
+                success: function(msg){
+                    if (msg && msg.url) {
+                        window.open(msg.url);
+                    }
+                }
+            });
+        }
+        var disconnect = function() {
+            $.get("/connect/disconnect", function() {
+                $("#user").html('');
+                $(".unauthenticated").show();
+                $(".authenticated").hide();
+            })
+            return true;
+        }
+        checkstatus();
+    </script>
+</head>
+<body>
+    <div class="container pb-2 mt-4 mb-2 border-bottom">
+        <h1>Sample Application - Deskera Books Java SDK</h1>
+    </div>
+    <div class="container mt-4 unauthenticated">
+        Not Connected: <button onClick="oauthconnect()" class="btn btn-primary">Connect</button>
+    </div>
+    <div class="container mt-4 authenticated" style="display:none">
+        Connected as: <span id="user"></span>
+        <div>
+            <button onClick="disconnect()" class="btn btn-primary mt-4">Disconnect</button>
+        </div>
+    </div>
+    <div class="container text-danger error"></div>
+</body>
+</html>
