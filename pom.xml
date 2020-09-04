@@ -9,11 +9,11 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.deskera.developer</groupId>
-	<artifactId>sampleproject</artifactId>
+	<artifactId>sample-app-deskera-books-sdk-java</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>war</packaging>
-	<name>sampleproject</name>
-	<description>Sample app based on Deskera Books Java SDK</description>
+	<packaging>jar</packaging>
+	<name>sample-app-deskera-books-sdk-java</name>
+	<description>Sample Application - Deskera Books Java SDK</description>
 
 	<properties>
 		<java.version>1.8</java.version>
@@ -73,6 +73,7 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+				<version>2.3.3.RELEASE</version>
 			</plugin>
 		</plugins>
 	</build>
