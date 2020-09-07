@@ -1,4 +1,4 @@
-# sample-app-deskera-books-sdk-java
+# sample-app-deskera-sdk-java
 
 This is a sample application built with [Sprint Boot](https://spring.io/projects/spring-boot) and [Apache Maven](https://maven.apache.org/).
 
@@ -6,9 +6,9 @@ This is a sample application built with [Sprint Boot](https://spring.io/projects
 
 1. Checkout code  
     ```
-    git clone https://github.com/Deskera/sample-app-deskera-books-sdk-java.git
+    git clone https://github.com/Deskera/sample-app-deskera-sdk-java.git
     ```  
-   or download it from https://github.com/Deskera/sample-app-deskera-books-sdk-java and unzip.
+   or download it from https://github.com/Deskera/sample-app-deskera-sdk-java and unzip.
 2. Start PostgreSQL database
    If you don't have a database instance available, you may start one with the following Docker command:
     ```
@@ -59,4 +59,4 @@ This is a sample application built with [Sprint Boot](https://spring.io/projects
 
 ## License
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://github.com/Deskera/sample-app-deskera-books-sdk-java/raw/master/LICENSE)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://github.com/Deskera/sample-app-deskera-sdk-java/raw/master/LICENSE)

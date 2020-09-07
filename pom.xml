@@ -9,11 +9,11 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.deskera.developer</groupId>
-	<artifactId>sample-app-deskera-books-sdk-java</artifactId>
+	<artifactId>sample-app-deskera-sdk-java</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
-	<name>sample-app-deskera-books-sdk-java</name>
-	<description>Sample Application - Deskera Books Java SDK</description>
+	<name>sample-app-deskera-sdk-java</name>
+	<description>Sample Application - Deskera Java SDK</description>
 
 	<properties>
 		<java.version>1.8</java.version>
